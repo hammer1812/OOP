@@ -24,11 +24,11 @@ public class WuerfelTest {
 		
 		
 			//HIER kannst du mal schauen wie es dann aussieht 1 ist quasi die veränderliche Variable
-			/*
+			
 			System.out.println("Häufigkeit, dass 1 auftritt");
 			System.out.println("absolut: " + stats.getAbsHaeufigkeit(1));
 			System.out.println("relativ: " + stats.getRelHaeufigkeit(1));
-			*/
+			
 		
 			//Fehler fail = new Fehler(stats); //stats wird übergeben und somit auch die private Variablen in ihr
 			//TO-DO in Fehler die Variablen aus stats im Konstruktor in den Variablen aus Fehler speichern (bsp.: "anzahlVersuche = stats.getAnzahlVersuche;")
