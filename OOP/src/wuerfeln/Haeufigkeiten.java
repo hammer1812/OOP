@@ -53,6 +53,17 @@ public class Haeufigkeiten {
 	}
 	
 	/**
+	 * @return String zur Darstellung aller relativer Haeufigkeiten
+	 */
+	public String toString(){
+		String s = "";
+		for(int i=1; i<=maxAugen; i++){
+			s = s + "Relative Häufigkeit für die Augenzahl " + i + " : " + relH[i-1] + "\n";
+		}
+		return s;
+	}
+	
+	/**
 	 * @param augenzahl Gewuerfelte Augenzahl die verwendet werden soll
 	 * @return Relative Haeufigkeit der angegebenen Augenzahl
 	 */
