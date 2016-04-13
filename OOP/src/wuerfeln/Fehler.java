@@ -6,6 +6,7 @@ public class Fehler {
 	
 	private double absFehler;
 	private double wahrscheinlichkeit;
+	private double relFehler;
 	private int relH;
 	private int maxAugen;
 	private Haeufigkeiten stats;
@@ -29,9 +30,12 @@ public class Fehler {
 		
 		absFehler = relH - wahrscheinlichkeit;
 		
+		relFehler = Math.abs(absFehler/wahrscheinlichkeit);
 		
-		if (absFehler / wahrscheinlichkeit <1){
-			Betrag = -1;
+		
+		
+		
+		
 		}
 			
 		
