@@ -24,7 +24,7 @@ public class Fehler {
 	}
 	public void Fehlerberechnung (){
 		
-		wahrscheinlichkeit = 1/maxAugen;
+		wahrscheinlichkeit = 1/(double)maxAugen;
 		
 		for (int i =0; i<absFehler.length; i++)
 			
@@ -33,7 +33,7 @@ public class Fehler {
 		{
 		for (int i=0; i<relFehler.length; i++)
 			
-			relFehler [i]= Math.abs(absFehler[i]/wahrscheinlichkeit);	
+			relFehler[i]= Math.abs(absFehler[i]/wahrscheinlichkeit);	
 		
 		}
 				
@@ -41,8 +41,8 @@ public class Fehler {
 	public String toString(){
 		String f = "";
 			
-		for (int i=0; i<=maxAugen; i++){
-			f = f + "Absoluter Fehler der Haeufigkeit zur Augenzahl " + i+1 + ": "+ absFehler[i] + "\nRelativer Fehler der Haeufigkeit zur Augenzahl " + i+1 + ": " + relFehler[i];
+		for (int i=1; i<=maxAugen; i++){
+			f = f + "Absoluter Fehler der Haeufigkeit zur Augenzahl " + i + ": "+ absFehler[i-1] + "\nRelativer Fehler der Haeufigkeit zur Augenzahl " + i + ": " + relFehler[i-1] + "\n\n";
 		}
 		return f;
 	}

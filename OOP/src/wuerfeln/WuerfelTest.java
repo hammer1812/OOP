@@ -20,15 +20,14 @@ public class WuerfelTest {
 			int anzahlVersuche = sc.nextInt();
 			Wuerfel dice = new Wuerfel(min, max);
 			Haeufigkeiten stats = new Haeufigkeiten(max, anzahlVersuche);
-			//Fehler fehl = new Fehler(stats);
+			Fehler fehl = new Fehler(stats);
 			
 			for(int i = 0; i < anzahlVersuche; i++){
 				stats.addAugenzahl(dice.wuerfeln());
 			}
 			
-			//fehl.Fehlerberechnung();
-			System.out.println(stats.toString());
-			//System.out.println(fehl.toString());
+			fehl.Fehlerberechnung();
+			System.out.println(stats.toString() + "\n" + fehl.toString());
 			
 			System.out.println("Neue Berechnung durchführen?(y/n)");
 			if(sc.next().charAt(0) == 'y')
