@@ -1,17 +1,32 @@
 package wuerfeln;
-
+/**
+ * 
+ * @author Philip Förster
+ *
+ */
 public class Haeufigkeiten {
-
-	//Klasseninterne Variablen
-	
+	/**
+	 * Maximale Augenzahl eines Wuerfels
+	 */
 	private int maxAugen;
+	/**
+	 * Anzahl der Wuerfe eines Wuerfels
+	 */
 	private int anzahlVersuche;
-	
+	/**
+	 * Relative Haeufigkeiten fuer die jeweiligen Augenzahlen
+	 */
 	private double[] relH;
+	/**
+	 * Absolute Haeufigkeiten fuer die jeweiligen Augenzahlen
+	 */
 	private int[] absH;
 	
-	//Konstruktor 
-	
+	/**
+	 * Konstruktor, erzeugt Haeufigkeiten
+	 * @param maxAugen Maximale Augenzahl des Wuerfels
+	 * @param anzahlVersuche Anzahl der Wuerfe eines Wuerfels
+	 */
 	public Haeufigkeiten(int maxAugen, int anzahlVersuche){
 		this.maxAugen = maxAugen;
 		this.anzahlVersuche = anzahlVersuche;
@@ -25,9 +40,11 @@ public class Haeufigkeiten {
 			relH[i] = 0;
 		}
 	}
-	//
-	//addiert die absolute häufigkeit um 1 bei würfeln und berechnet relative häufigkeit 
-	
+
+	/**
+	 * Inkrementiert die Absolute Haeufigkeit für die angegebene Augenzahl um 1 und legt die Relative Haeufigkeit fest
+	 * @param augenzahl Gewuerfelte Augenzahl die verwendet werden soll
+	 */
 	public void addAugenzahl(int augenzahl){
 		
 		absH[augenzahl -1] += 1;
@@ -35,20 +52,29 @@ public class Haeufigkeiten {
 		
 	}
 	
-	//Getter um auf Variablen zugreifen zu können
-	//Array-Getter: augenzahl = jeweilige Häfigkeit für die gewünschte augenzahl
+	/**
+	 * @param augenzahl Gewuerfelte Augenzahl die verwendet werden soll
+	 * @return Relative Haeufigkeit der angegebenen Augenzahl
+	 */
 	public double getRelHaeufigkeit(int augenzahl){
 		return relH[augenzahl -1];
 	}
-	
+	/**
+	 * @param augenzahl Gewuerfelte Augenzahl die verwendet werden soll
+	 * @return Absolute Haeufigkeit der angegebenen Augenzahl
+	 */
 	public int getAbsHaeufigkeit(int augenzahl){
 		return absH[augenzahl -1];
 	}
-	
+	/**
+	 * @return Maximale Augenzahl
+	 */
 	public int getMaxAugen(){
 		return maxAugen;
 	}
-	
+	/**
+	 * @return Anzahl der Wuerfe eines Wuerfels
+	 */
 	public int getAnzahlVersuche(){
 		return anzahlVersuche;
 	}
