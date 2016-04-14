@@ -1,17 +1,34 @@
 package wuerfeln;
-
+/**
+*
+*	@author Adrian Fietta
+*
+*/
 public class Fehler {
-	
-	//Klasseninterne Variablen
-	
+	/**
+	*	Absoluter Fehler fuer die jeweiligen Augenzahlen
+	*/
 	private double[] absFehler;
+	/**
+	*	Wahrscheinlichkeit, dass eine Augenzahl gewuerfelt wird
+	*/
 	private double wahrscheinlichkeit;
+	/**
+	*	Relativer Fehler fuer die jeweiligen Augenzahlen
+	*/
 	private double[] relFehler;
+	/**
+	*	Maximale Augenzahl eines Wuerfels
+	*/
 	private int maxAugen;
+	/**
+	*	Objekt Haeufigkeiten
+	*/
 	private Haeufigkeiten stats;
-	
-	//Konstruktor
-	
+	/**
+	*	Konstruktor, legt Arrays fuer die jeweiligen Fehler an
+	*	@param maxAugen Magimale Augenzahl des Wuerfels
+	*/
 	public Fehler (Haeufigkeiten stats){
 		
 		this.stats = stats;
@@ -22,6 +39,10 @@ public class Fehler {
 		absFehler = new double[maxAugen];
 			
 	}
+	/**
+	*	Berechnet die Wahrscheinlichkeit, 
+	*	berechnet den absoluten, sowie relativen Fehler, der Haeufigkeiten und speichert diese zur jeweiligen Augenzahl im jeweiligen Array
+	*/
 	public void Fehlerberechnung (){
 		
 		wahrscheinlichkeit = 1/(double)maxAugen;
@@ -38,6 +59,9 @@ public class Fehler {
 		}
 				
 	}
+	/**
+	*	@return String zur Ausgabe der Fehlerberechnungen
+	*/
 	public String toString(){
 		String f = "";
 			
